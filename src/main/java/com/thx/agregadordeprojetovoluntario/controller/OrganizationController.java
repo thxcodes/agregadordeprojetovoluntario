@@ -18,6 +18,7 @@ public class OrganizationController {
     @GetMapping(path = "/api/organization")
     public ResponseEntity <Collection<OrganizationModel>> getAll() {
         Collection<OrganizationModel> collection = repository.findAll();
+        
         return ResponseEntity.ok().body(collection);
     }
 
@@ -51,6 +52,7 @@ public class OrganizationController {
             _organization.setFone(organization.getFone());
             _organization.setMissao(organization.getMissao());
             _organization.setNomefantasia(organization.getNomefantasia());
+            _organization.setImagem(organization.getImagem());
             _organization.setRazaosocial(organization.getRazaosocial());
             _organization.setRepresentante(organization.getRepresentante());
             _organization.setValores(organization.getValores());

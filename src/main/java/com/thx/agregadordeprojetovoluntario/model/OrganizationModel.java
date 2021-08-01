@@ -18,6 +18,9 @@ public class OrganizationModel {
     @Column(nullable = false, length = 18)
     public String cnpj;
 
+    @Column(nullable = false, length = 200)
+    public String imagem;
+
     @Column(nullable = false, length = 100)
     public String razaosocial;  
 
@@ -61,6 +64,14 @@ public class OrganizationModel {
 
     public void setRazaosocial(String razaosocial) {
         this.razaosocial = razaosocial;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     public String getNomefantasia() {
